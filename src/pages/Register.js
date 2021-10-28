@@ -8,14 +8,15 @@ const Register = () => {
     const [value, setValue] = React.useState('');
 
     const handleChange = (event) => {
-      setValue(event.target.value);
+      setValue({...value,[event.target.name]: event.target.value });
+      console.log(value);
     };
 
     const formInputs = [
-        {value: 'firstName', text: 'First name', type:'text'},
-        {value: 'lastName', text: 'Last name',type:'text'},
-        {value: 'ninNumber', text: 'NIN Number', type:'number'},
-        {value: 'emailAddress', text: 'Email Address', type:'email'},
+        {name: 'firstName', value: 'First name', type:'text'},
+        {name: 'lastName', value: 'Last name',type:'text'},
+        {name: 'ninNumber', value: 'NIN Number', type:'number'},
+        {name: 'emailAddress', value: 'Email Address', type:'email'},
     
     ];
 
@@ -25,11 +26,11 @@ const Register = () => {
       <TextField
           required
           id="outlined-required"
-          label={formInput.text}
+          label={formInput.value}
+          name={formInput.name}
           type={formInput.type}
-          value={value}
+          value={value[formInput.value]}
           variant="outlined"
-          defaultValue={formInput.text}
           onChange={handleChange}
           InputLabelProps={{
             shrink: true,
@@ -110,7 +111,8 @@ const Register = () => {
                     variant="outlined"
                     >
                     {zones.map((zone) => (
-                        <MenuItem key={zone} value={zone}>
+                        <MenuItem key={zone} value={zone}  onChange={handleChange}
+>
                         {zone}
                         </MenuItem>
                     ))}
@@ -147,9 +149,9 @@ const Register = () => {
                                 shrink: true,
                             }}
                     >
-                     <InputLabel required htmlFor="zones">Limited importance</InputLabel>
+                     <InputLabel required htmlFor="limited">Limited importance</InputLabel>
                     <Select
-                    label="Zones"
+                    label="Limited Importance"
                     inputProps={{
                         id: 'zones',
                     }}
@@ -157,9 +159,9 @@ const Register = () => {
 
                     >
 
-                    {zones.map((zone) => (
-                        <MenuItem key={zone} value={zone}>
-                        {zone}
+                    {orderOfImportance.map((importance) => (
+                        <MenuItem key={importance} value={importance}>
+                        {importance}
                         </MenuItem>
                     ))}
                     </Select>
