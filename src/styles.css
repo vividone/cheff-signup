@@ -1,0 +1,123 @@
+
+
+.formDiv{
+    width: 40%;
+    border:1px solid aqua;
+    margin: 0 auto;
+    margin-top: -10rem;
+    background: #fff;
+    padding: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 1rem;
+}
+
+.header{
+    height: 45vh;
+    /* padding: 2rem; */
+    background-image: url('./images/bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.topButton{
+float: right;
+background-color: #064F4B;
+color: #fff;
+padding: .5rem 1.5rem;
+border: 0;
+border-radius: .5rem;
+font-size: 1rem;
+
+}
+
+
+.topHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.formInput {
+    margin: 1.5rem 0;
+}
+.MuiFormControl-root{
+    width: 100%;
+}
+.formHeader{
+    margin-bottom: 2rem;
+}
+.h3{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.MuiFormGroup-row{
+    margin: 2.5rem 0;
+
+}
+ .MuiFormControl-root{
+    margin: 1.5rem 0;
+
+}
+.submitButton{
+    width: 100%;    
+    background-color: #064F4B;
+    color: #fff;
+    padding: .5rem;
+    border: 0;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+.footerHeading{
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    padding-right: 2.5rem;
+
+}
+.footer{
+    background-color: #000;
+    height: 3vh;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.footerElements{
+    display: inline-flex;
+    color: #fff;
+    vertical-align: middle;
+}
+.footerItems{
+    font-size: 1rem;
+    color: #fff;
+    padding-right: 2.5rem;
+    padding-left: 0.5rem;
+
+}
+.overlay {
+    /* position: fixed;  */
+    /* display: block;  */
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 2; 
+    /* cursor: pointer;  */
+  }
+  .headerContent{
+      top: 0;
+      right: 0;
+      left: 0;
+      /* background-color: red; */
+      position: absolute;
+      z-index: 100;
+      padding-top: 3rem;
+      padding-right: 1rem;
+  }
